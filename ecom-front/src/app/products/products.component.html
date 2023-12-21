@@ -1,1 +1,23 @@
-<p>products works!</p>
+<div *ngIf="products">
+  <div *ngFor="let x of products._embedded.products">
+    <div class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{x.Name }}</div>
+        <div class="panel-body">
+          <table class="table table-hover">
+            <tr>
+              <td>
+                <ul>
+                  <li>Price: {{x.Price}}</li>
+                  <li>Available: {{x.Discription}}</li>
+                  <li>Category: {{x.category}}</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
